@@ -1,0 +1,139 @@
+body {
+  margin:0; padding:0;  /* c'era un bordino bianco nella pagina, ho annullato eventuali margini e padding naturali del body messi dal browser */
+  background-image: url("natura.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.FirstTitle {
+  margin: 5% 10% 0 10%;
+}
+
+.container {
+  display: flex; /* impostando il container come display flex va tutto a posto da solo senza dover usare position e float */
+  justify-content: center; /* per centrare il contenuto orizzontalmente */
+  align-items: center; /* per centrare il contenuto verticalmente */
+  flex-wrap: wrap; /* nelle viewport più piccole metterà le card una sotto l'altra, accoppiata ad una media query che modifica le width dell'elemento  */
+  height:100vh; /* vh è pari all’1% dell’altezza della viewport, quindi 100vh = 100% dell'altezza della finestra. Accoppiato alle regole dei flex ti centra tutto! Soddisfacente :) */
+}
+
+.wrapper {
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 25%; /* qui la width va bene, ma sempre in % */
+  margin:2%; /* questo lo mettiamo per avere spazio tra le colonne */
+  text-align:center; /* centriamo tutto!!! */
+}
+
+img {
+  border-radius: 25px 25px 0 0;
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 0;
+  height: 300px;
+  object-fit: cover;
+}
+
+.imageBox {
+  position: relative;
+}
+
+.image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .5s ease-out;
+}
+
+.image-hover:hover {
+  opacity: 1;
+}
+
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  padding: 0 20px;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 0 20px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0px;
+  color: #222;
+  margin-bottom: -20px;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 0 20px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 0px;
+  color: #117474;
+}
+
+p {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  padding: 0 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.button {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.2s;
+  background: linear-gradient(90deg, #117474 0%, #63aba2 50%, #a1d1c8 100%);
+  background-size: 400% 400%;
+  -webkit-animation: AnimationGradient 4s linear infinite;
+  -moz-animation: AnimationGradient 4s linear infinite;
+  animation: AnimationGradient 4s linear infinite;
+  border: 0px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #ffffff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 0.875rem; 
+  /* per la responsiveness meglio usare l'unità di misura in rem, che è relativa a quella dichiarata nel body, ma se non la dichiari considera che quella del browser è 16 px di solito. Quindi 1rem = 16px.  14px = 0.875rem (ci sono convertitori online) */
+  margin-bottom: 20px; /* in questo caso secondo me vanno bene i px, sono pochi e sono in un lemento interno, un po' come i margini naturali dei p o degli h1 ecc */
+}
+
+.button:hover {
+  color: white;
+  background: linear-gradient(90deg, #673900 0%, #b37f36 50%, #673900 100%);
+  background-size: 400% 400%;
+}
+
+@-webkit-keyframes AnimationGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .wrapper { width:80%; }
+}
