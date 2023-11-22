@@ -1,0 +1,21 @@
+.container{
+    width: 400px;
+    height: 92px;
+    background-color: #fff;
+    padding: 30px 30px;
+    overflow: hidden;
+    border-radius: 25px;
+    transition: 0.6s ease-out;
+}
+
+
+h1 {
+  font-size: 30px;
+  line-height: 44px;
+}
+
+img {
+  display: block;
+  width:200px;
+}
+
