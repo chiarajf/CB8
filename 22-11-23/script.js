@@ -44,8 +44,8 @@ const secondFetch = async () => {
 
 const allImage = async()=>{
     const data = await secondFetch();
-    data.forEach((obj) =>{
-        const card = createImgTxt(obj);
+    data.forEach((object) =>{
+        const card = createImgTxt(object);
         document.body.append(card)
     })
 }
