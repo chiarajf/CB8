@@ -1,0 +1,418 @@
+/* ***** Import Font Montserrat *****/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ***** Global settings*****/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 42px;
+  line-height: 48px;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 34px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+h6 {
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6c63ff;
+}
+
+p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+a {
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #6c63ff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  margin: 10px 0;
+}
+
+.button:hover {
+  background-color: #ff6884;
+  color: #fff;
+}
+
+/* ***** End  Global settings*****/
+
+.main-header {
+  width: 100%;
+  background-color: #fff;
+}
+
+.wrapper-header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style-type: none;
+}
+
+.menu a,
+.login a {
+  color: #222;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover,
+.login a:hover {
+  color: #ff6884;
+}
+
+.login ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style-type: none;
+  align-items: center;
+}
+
+.button-order {
+  background-color: transparent;
+  border: 1px solid #6c63ff;
+  color: #6c63ff;
+}
+
+.button-order:hover {
+  border: 1px solid #ff6884;
+  color: #fff !important;
+}
+
+.wrapper-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.hero-left {
+  color: #222;
+  width: 100%;
+}
+
+.left {
+  width: 70%;
+}
+
+.hero-right {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.hero-image-right {
+  width: 100%;
+  height: 70vh;
+}
+
+.secondSection {
+  width: 100%;
+}
+
+.TitleSecondSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8%;
+  padding-bottom: 3%;
+  text-align: center;
+}
+
+.wrapper-second {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 8%;
+  gap: 80px;
+}
+
+.FirstElement,
+.thirdElement,
+.secondElement {
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.FirstElement img,
+.secondElement img,
+.thirdElement img {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: transparent;
+}
+
+.wrapperThirdSection {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-bottom: 8%;
+  padding-top: 8%;
+}
+
+.wrapperThirdSection-left {
+  color: #222;
+  width: 100%;
+}
+
+.left {
+  width: 70%;
+}
+
+.wrapperThirdSection-right {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img.wrapperThirdSectionRight-image-right {
+  width: 400px;
+  height: auto;
+}
+
+.button-third {
+  background-color: transparent;
+  border: 1px solid #ff6884;
+  color: #fff;
+  background-color: #ff6884;
+}
+
+.button-third:hover {
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: #ff6884 !important;
+}
+
+.fourthSection {
+  width: 100%;
+  background: linear-gradient(135deg, #ff6884 0%, #b165c6 65%, #6c63ff 100%);
+}
+
+.TitleFourthSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+.titleWhite {
+  color: #fff;
+  font-size: 42px;
+  line-height: 48px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.wrapper-fifthSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 8%;
+  padding-bottom: 8%;
+}
+
+.wrapperLeft {
+  color: #222;
+  width: 100%;
+}
+
+.left h3 {
+  margin: 10px 0;
+}
+
+.wrapperRight {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.wrapper-image-right {
+  width: 100%;
+  height: 50vh;
+}
+
+.firstCard,
+.secondCard,
+.thirdCard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 5px 5px 5px #9e9e9e0f;
+  border-radius: 25px;
+  border: 1px solid #dadada;
+  padding: 15%;
+}
+
+.firstCard img,
+.secondCard img,
+.thirdCard img {
+  width: 100%;
+  height: 200px;
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+
+.firstCard h5,
+.secondCard h5,
+.thirdCard h5 {
+  text-align: left;
+}
+/* ***** Responsive settings *****/
+
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .wrapper-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .hedaer-logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .menu ul {
+    gap: 10px;
+  }
+
+  .menu {
+    margin: 20px 0;
+  }
+
+  a.button.button-order {
+    padding: 10px 10px;
+  }
+
+  .wrapper-hero,
+  .wrapperThirdSection,
+  .wrapper-fifthSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    flex-direction: column-reverse;
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .wrapper-second {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .wrapperThirdSection {
+    margin: 40px 0;
+  }
+}
