@@ -91,7 +91,8 @@ h1 {
     margin: 20px;
   }
 }
-
-img{
-  width: 20%;
+img {
+    width: 20%;
+    height: auto;
+}
 }
