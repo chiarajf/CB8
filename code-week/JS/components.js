@@ -20,7 +20,7 @@ const navBar = () => {
   wrapperNav.className = "navbar";
   search.className = "search";
   image.className = "ìmg";
-  image.src = "../media/logo.png";
+  image.src = "../MEDIA/logo.png";
   image.alt = "moviesThriller-logo";
   input.setAttribute("type", "text");
   input.setAttribute("placeholder", "Ricerca...");
