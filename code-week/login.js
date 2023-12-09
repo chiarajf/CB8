@@ -9,7 +9,7 @@ const formSignIn = () => {
   const image = document.createElement("img");
 
   image.className = "ìmg";
-  image.src = "../media/logo.png";
+  image.src = "./media/logo.png";
   image.alt = "moviesThriller-logo";
 
   const heading = document.createElement("h1");
