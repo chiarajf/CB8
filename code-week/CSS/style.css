@@ -286,5 +286,10 @@ main {
     font-size: 0.8rem;
     cursor: pointer;
   }
+
+  .favorite {
+  background-color: #da1c5c;
+  color: #fff;
+}
 }
 
