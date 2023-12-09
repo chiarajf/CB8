@@ -1,0 +1,266 @@
+/* GLOBAL SETTINGS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  display: block;
+}
+
+body {
+  background-color: #101010;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #da1c5c;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+a {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px 6px 15px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #da1c5c;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 5%;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #e2f0ef;
+  color: #da1c5c;
+  border: 1px solid #e2f0ef;
+}
+
+/* SETTINGS MOBILE */
+
+/* NAV */
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+}
+
+.search {
+  width: 100%;
+  gap: 20px;
+  padding: 0 20px;
+  display: flex;
+  height: 34px;
+}
+
+.search img {
+  object-fit: cover;
+}
+
+.search input[type="text"] {
+  color: rgb(26, 26, 26);
+  padding-left: 8px;
+  width: 100%;
+  border-radius: 6px;
+  border: 0;
+  outline: none;
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 60vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.hero-image-container {
+  display: inline-block;
+  width: 100%;
+  height: 60vh;
+  animation: fade-in 0.5s ease-in forwards, fade-out 0.5s 4.8s ease-out forwards;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 30%;
+  display: block;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  background-color: #898989;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.hero-title {
+  position: absolute;
+  top: 65%;
+  width: 100%;
+  color: #fff;
+  z-index: 2;
+  text-align: center; /* Centra il testo */
+}
+
+.hero-title h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* MAIN */
+
+.mainsection {
+  margin-bottom: 20%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 3%;
+  margin: 20px 0;
+}
+
+.lists-container h3 {
+  color: #da1c5c;
+  font-size: 1.2rem;
+}
+
+.lists-container {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.cards-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: scroll;
+}
+
+.cards-list::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #393939;
+}
+
+.cards-list::-webkit-scrollbar {
+  height: 0.4rem;
+  background-color: #0f0f0f;
+  border-radius: 12px;
+}
+
+.cards-list::-webkit-scrollbar-thumb {
+  background-color: #da1c5c;
+  border-radius: 12px;
+}
+
+.cards-list img {
+  height: 40vh;
+  object-fit: contain;
+}
+
+.fa-star {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: #da1c5c;
+  background-color: #fff;
+  border-radius: 100%;
+  padding: 3%;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.favorite {
+  background-color: #da1c5c;
+  color: #fff;
+}
+
+.container-image {
+  width: 100%;
+  position: relative;
+}
+
+/* FOOTER */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1f1f1f;
+  box-shadow: 0px -5px 8px #18181878;
+  color: white;
+  z-index: 1;
+}
+
+.mobile-footer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style-type: none;
+  padding: 2%;
+}
+
+.mobile-footer li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mobile-footer li img {
+  background-color: #282828;
+  border-radius: 100%;
+  width: 2rem;
+  padding: 22%;
+}
+
+.mobile-footer li img:hover {
+  background-color: #da1c5c;
+}
