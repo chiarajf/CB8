@@ -91,7 +91,7 @@ const createElementFromDetail = (data) => {
   containerImage.append(imageEl);
   containerText.append(titleEl, vote, releaseData, overview);
   container.append(containerImage, containerText, wrapperFooter);
-  body.appendChild(container);
+  body.append(container);
 };
 
 export { readDetails, createElementFromDetail };
