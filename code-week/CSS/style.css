@@ -212,8 +212,8 @@ main {
   color: #da1c5c;
   background-color: #fff;
   border-radius: 100%;
-  padding: 3%;
-  font-size: 0.8rem;
+  padding: 5%;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 .favorite {
@@ -264,3 +264,27 @@ main {
 .mobile-footer li img:hover {
   background-color: #da1c5c;
 }
+
+@media only screen and (min-width: 600px) {
+  .mobile-footer {
+    padding: 1%;
+  }
+
+  .cards-list img {
+    height: 60vh;
+    object-fit: contain;
+  }
+
+  .fa-star {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    color: #da1c5c;
+    background-color: #fff;
+    border-radius: 100%;
+    padding: 3%;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+}
+
