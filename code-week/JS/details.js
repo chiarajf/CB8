@@ -58,6 +58,11 @@ const createElementFromDetail = (data) => {
     window.location.href = "main.html";
   });
 
+    const currentPage = window.location.pathname;
+  if (currentPage.includes("details.html")) {
+    icon3.style.backgroundColor = "#da1c5c";
+  }
+
   liEl4.append(icon4);
   liEl3.append(icon3);
   liEl1.append(icon1);
