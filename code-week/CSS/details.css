@@ -75,7 +75,7 @@ a {
 
 .container-detail {
   width: 100%;
-  white-space: nowrap;
+white-space: normal;
   overflow-x: hidden;
   padding-bottom: 5%;
 }
