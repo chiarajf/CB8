@@ -79,8 +79,6 @@ a {
 
 .search img {
   object-fit: cover;
-      width: 20%;
-    height: 80px;
 }
 
 .search input[type="text"] {
