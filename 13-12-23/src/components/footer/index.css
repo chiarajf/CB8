@@ -1,0 +1,24 @@
+.footer {
+  background-color: darkslateblue;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-text {
+  width: 70%;
+  text-align: center;
+}
+
+.footer-text ul {
+  color: #fff;
+  list-style-type: none;
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+}
+
+input::placeholder {
+  color: darkslateblue;
+}

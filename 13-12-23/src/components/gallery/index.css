@@ -1,0 +1,15 @@
+.gallery {
+  width: 100vw;
+}
+
+.gallery h2 {
+  padding: 0 24px;
+}
+
+.gallery-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 3%;
+  justify-content: space-around;
+}
