@@ -1,0 +1,32 @@
+@import "../../assets/css/variables.scss";
+
+.todo-form {
+  background: $secondarycolor;
+  border-radius: 5px;
+  max-width: 600px;
+  display: flex;
+  gap: 20px;
+
+  .todo-input {
+    width: 90%;
+    outline: none;
+    background: none;
+    border: 1px solid $primarycolor;
+    color: $basecolor;
+    padding: 10px;
+  }
+
+  .todo-btn {
+    width: 10%;
+    background: $primarycolor;
+    color: $basecolor;
+    border: none;
+    padding: 0.55rem;
+    cursor: pointer;
+  }
+
+  ::placeholder {
+    color: $basecolor;
+    opacity: 0.5;
+  }
+}

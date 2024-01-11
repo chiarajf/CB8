@@ -1,0 +1,16 @@
+@import "../../assets/css/variables.scss";
+
+.todo-list {
+  border-radius: 5px;
+  max-width: 600px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+
+  h3 {
+    color: $basecolor;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}

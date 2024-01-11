@@ -1,0 +1,49 @@
+@import "../../assets/css/variables.scss";
+
+.todo {
+  display: flex;
+  color: $basecolor;
+  border-radius: 5px;
+  max-width: 600px;
+  width: 100%;
+  background-color: $primarycolor;
+  padding: 10px 20px;
+  align-items: center;
+
+  .todo-elm {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .todo-btn {
+    background-color: transparent;
+    border: 0px;
+    font-size: 18px;
+  }
+
+  .todo-btn-save {
+    font-size: 12px;
+    background-color: transparent;
+    border: 0px;
+    color: $basecolor;
+  }
+
+  .todo-btn-cancel {
+    font-size: 12px;
+    background-color: transparent;
+    border: 0px;
+    color: $basecolor;
+  }
+
+  .edit {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .editingcontain {
+    display: flex;
+    gap: 20px;
+  }
+}
