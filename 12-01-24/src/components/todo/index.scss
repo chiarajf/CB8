@@ -1,0 +1,49 @@
+@import "../../assets/css/variables.scss";
+@import "../../assets/css/mixins.scss";
+
+.todo {
+  display: flex;
+  color: $basecolor;
+  border-radius: 5px;
+  width: 100%;
+  background-color: $primarycolor;
+  padding: 10px 10px;
+  align-items: center;
+
+  .todo-elm {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .todo-btn {
+    background-color: transparent;
+    border: 0px;
+    font-size: 18px;
+  }
+
+  .todo-btn-save {
+    font-size: 12px;
+    background-color: transparent;
+    border: 0px;
+    color: $basecolor;
+  }
+
+  .todo-btn-cancel {
+    font-size: 12px;
+    background-color: transparent;
+    border: 0px;
+    color: $basecolor;
+  }
+
+  .edit {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .editingcontain {
+    display: flex;
+    gap: 10px;
+  }
+}

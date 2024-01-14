@@ -1,0 +1,10 @@
+@mixin display-flex-column(
+  $flex-direction: row,
+  $justify-content: inherit,
+  $gap: 0px
+) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  gap: $gap;
+}

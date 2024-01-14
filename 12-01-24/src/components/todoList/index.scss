@@ -1,0 +1,14 @@
+@import "../../assets/css/variables.scss";
+@import "../../assets/css/mixins.scss";
+
+.todo-list {
+  border-radius: 5px;
+  @include display-flex-column(column, inherit, 10px);
+
+  h3 {
+    color: $basecolor;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
