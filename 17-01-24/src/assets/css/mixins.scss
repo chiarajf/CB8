@@ -1,0 +1,11 @@
+@mixin display(
+  $display: inherit,
+  $fledirection: row,
+  $justify-content: inherit,
+  $gap: 0px
+) {
+  display: $display;
+  flex-direction: $fledirection;
+  justify-content: $justify-content;
+  gap: $gap;
+}
