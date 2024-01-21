@@ -1,0 +1,31 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.BookList {
+  width: 100%;
+  height: 100vh;
+  @include display(flex, column, flex-start, flex-start, 0px);
+
+  &:nth-child(2) {
+    margin-top: 5%;
+  }
+
+  &:nth-child(3) {
+    margin-top: 5%;
+  }
+
+  .title {
+    @include font("Raleway", 800, 22px, 10px, 18px);
+    color: #3d0d0d;
+  }
+
+  .list {
+    padding-top: 3rem;
+    padding-bottom: 20px;
+    @include display(flex, row, flex-start, flex-start, 20px);
+    overflow-x: scroll;
+    width: 100%;
+    @include scrollbars(10px, $color1hover, $color1);
+    overflow-y: hidden;
+  }
+}

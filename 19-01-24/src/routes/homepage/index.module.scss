@@ -1,0 +1,20 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.homepage {
+  padding: 5%;
+
+  width: 100%;
+  height: 100vh;
+  @include display(flex, column, flex-start, center, 10px);
+
+  .love {
+    background-color: $color1;
+    transition: all 0.35s;
+    height: 240px;
+
+    &:hover {
+      background-color: $color1hover;
+    }
+  }
+}

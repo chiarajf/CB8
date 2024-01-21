@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@mixin display(
+  $display: inherit,
+  $fledirection: row,
+  $justify-content: inherit,
+  $align-items: inherit,
+  $gap: 0px
+) {
+  display: $display;
+  flex-direction: $fledirection;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+}
+
+@mixin font(
+  $family: sans-serif,
+  $weight: normal,
+  $size: 16px,
+  $margin: 0,
+  $line: 0
+) {
+  font-family: "Raleway";
+  font-weight: $weight;
+  font-size: $size;
+  margin: $margin;
+  line-height: $line;
+}
+
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../assets/css/mixins.scss";
+@import "../../assets/css/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.book {
+  border-radius: 12px;
+  padding: 0 2% 0 2%;
+  background-color: $color1;
+  transition: all 0.35s;
+  height: 270px;
+  @include display(flex, column, flex-start, center, 0px);
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background-color: $color1hover;
+  }
+
+  .img {
+    border-radius: 12px;
+    transform: translateY(-15%);
+    box-shadow: 3px 3px 10px #3434344c;
+    width: 120px;
+    height: 200px;
+  }
+
+  .info {
+    margin-top: -20px;
+  }
+
+  .title {
+    @include font("Raleway", 800, 14px, 0px, 18px);
+    text-align: center;
+    color: #3d0d0d;
+    letter-spacing: 1px;
+  }
+
+  .author {
+    position: relative;
+    text-transform: uppercase;
+    @include font("Raleway", 500, 10px, 0px, 18px);
+    text-align: center;
+    color: #1b0606;
+  }
+}
