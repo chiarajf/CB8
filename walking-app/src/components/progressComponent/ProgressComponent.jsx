@@ -14,10 +14,6 @@ const ProgressComponent = () => {
     }
   }, []);
 
-  const handleGoBack = () => {
-    window.history.back();
-  };
-
   const MotionDiv = ({ children }) => (
     <motion.div
       initial={{ opacity: 0 }}
@@ -34,7 +30,6 @@ const ProgressComponent = () => {
     <div className={styles.progressContainer}>
       <MotionDiv>
         <div>
-          <button onClick={handleGoBack}>Torna indietro</button>
           {savedDailyProgress ? (
             savedDailyProgress.map((item, index) => (
               <div key={index} className={styles.progressItem}>
