@@ -55,12 +55,10 @@ const AppShellComponent = ({ children, progressButtons, hideNavbar }) => {
         </AppShell.Navbar>
       )}
       <AppShell.Main className={mainClassName}>{children}</AppShell.Main>
-      <div>
-        <div className={styles.Footer}>
-          {progressButtons}
-          <p className={styles.withLove}>WalkingWebApp creata con ❤️‍🩹 | 2024</p>
-        </div>
-      </div>
+      <AppShell.Footer>
+        <div>{progressButtons}</div>
+        <p className={styles.withLove}>WalkingWebApp creata con ❤️‍🩹 | 2024</p>
+      </AppShell.Footer>
     </AppShell>
   );
 };
