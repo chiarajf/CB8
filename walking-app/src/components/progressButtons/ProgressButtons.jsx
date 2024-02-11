@@ -1,4 +1,11 @@
-import { useEffect, useState } from "react";
+import styles from "./index.module.scss";
+import {
+  EyeOpenIcon,
+  TrashIcon,
+  SewingPinIcon,
+  HomeIcon,
+} from "@radix-ui/react-icons";
+import { useState } from "react";
 
 const ProgressButtons = ({
   handleSaveProgress,
@@ -9,15 +16,6 @@ const ProgressButtons = ({
   const [showEyeIcon, setShowEyeIcon] = useState(false);
   const [showSavePopup, setShowSavePopup] = useState(false);
   const [showClearPopup, setShowClearPopup] = useState(false);
-
-  useEffect(() => {
-    const savedDailyProgress = JSON.parse(
-      localStorage.getItem("dailyProgress")
-    );
-    if (savedDailyProgress && savedDailyProgress.length > 0) {
-      setShowEyeIcon(true);
-    }
-  }, []);
 
   const handleSaveProgressClick = () => {
     handleSaveProgress();

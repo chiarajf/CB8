@@ -8,13 +8,11 @@
 
   .starter {
     @include display(flex, column, flex-start, center, 20px, 20px 0 0 0);
-    padding-bottom: 100px;
   }
 
   .navigation_buttons {
     padding: 20px;
     @include display(flex, row, center, center, 0, 0);
-    padding-bottom: 100px;
   }
 
   .daybyday_container {
@@ -56,4 +54,6 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .walking {
+  }
 }

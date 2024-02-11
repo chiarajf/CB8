@@ -11,6 +11,7 @@ import DayByDay from "@/components/daybyday/DayByDay";
 import maps from "@/mock/maps";
 import AppShellComponent from "@/components/appShellComponent/AppShellComponent";
 import ProgressButtons from "@/components/progressButtons/ProgressButtons";
+import { store } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
 
 export default function Walking() {
