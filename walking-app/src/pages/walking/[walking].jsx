@@ -79,7 +79,10 @@ export default function Walking() {
   };
 
   const handleSaveProgress = () => {
-    saveProgress();
+    const currentDayData = walkData[`day${currentDay}`];
+    if (currentDayData) {
+      setDailyProgress([{ day: currentDay, data: currentDayData }]);
+    }
   };
 
   const handleClearProgress = () => {
