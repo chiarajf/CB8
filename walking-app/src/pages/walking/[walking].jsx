@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
@@ -11,8 +9,6 @@ import DayByDay from "@/components/daybyday/DayByDay";
 import maps from "@/mock/maps";
 import AppShellComponent from "@/components/appShellComponent/AppShellComponent";
 import ProgressButtons from "@/components/progressButtons/ProgressButtons";
-import { store } from "react-notifications-component";
-import "react-notifications-component/dist/theme.css";
 
 export default function Walking() {
   const router = useRouter();
@@ -20,27 +16,6 @@ export default function Walking() {
   const [currentDay, setCurrentDay] = useState(1);
   const [showDayByDay, setShowDayByDay] = useState(false);
   const [dailyProgress, setDailyProgress] = useState([]);
-
-  useEffect(() => {
-    localStorage.setItem("currentDay", currentDay);
-    localStorage.setItem("dailyProgress", JSON.stringify(dailyProgress));
-  }, [currentDay, dailyProgress]);
-
-  useEffect(() => {
-    const savedCurrentDay = localStorage.getItem("currentDay");
-    if (savedCurrentDay) {
-      setCurrentDay(parseInt(savedCurrentDay));
-    }
-
-    const savedDailyProgress = JSON.parse(
-      localStorage.getItem("dailyProgress")
-    );
-    if (savedDailyProgress.length > 0) {
-      setCurrentDay(savedDailyProgress[savedDailyProgress.length - 1].day);
-      setDailyProgress(savedDailyProgress);
-      setShowDayByDay(true);
-    }
-  }, []);
 
   useEffect(() => {
     const savedCurrentDay = localStorage.getItem("currentDay");
@@ -58,6 +33,11 @@ export default function Walking() {
       setShowDayByDay(true);
     }
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("currentDay", currentDay);
+    localStorage.setItem("dailyProgress", JSON.stringify(dailyProgress));
+  }, [currentDay, dailyProgress]);
 
   const handleNextDay = (event) => {
     event.preventDefault();
@@ -97,7 +77,9 @@ export default function Walking() {
   };
 
   const handleSaveProgress = () => {
-    saveProgress();
+    if (dailyProgress.length > 0) {
+      saveProgress();
+    }
   };
 
   const handleClearProgress = () => {
