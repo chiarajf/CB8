@@ -198,12 +198,21 @@ export default function Walking() {
               <Meteo firstCity={first_city} lastCity={last_city} />
               <div className={styles.starter}>
                 <h3>Hai tutto l'occorrente?</h3>
-                <button
-                  className={styles.startButton}
-                  onClick={handleStartWalking}
-                >
-                  Inizia il cammino!
-                </button>
+                {dailyProgress.length > 0 ? (
+                  <button
+                    className={styles.startButton}
+                    onClick={handleStartWalking}
+                  >
+                    Riprendi il cammino
+                  </button>
+                ) : (
+                  <button
+                    className={styles.startButton}
+                    onClick={handleStartWalking}
+                  >
+                    Inizia il cammino!
+                  </button>
+                )}
               </div>
             </div>
           </MotionDiv>
