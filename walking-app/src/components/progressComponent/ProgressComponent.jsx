@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom"; // Importa useHistory per navigare tra le pagine
+import { useRouter } from "next/router";
 import styles from "./index.module.scss";
 import Meteo from "../meteo/Meteo";
 import { motion } from "framer-motion";
@@ -7,7 +7,7 @@ import SleepData from "../sleepData/SleepData";
 
 const ProgressComponent = () => {
   const [savedDailyProgress, setSavedDailyProgress] = useState(null);
-  const history = useHistory(); // Inizializza la history per la navigazione
+  const router = useRouter();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -17,7 +17,7 @@ const ProgressComponent = () => {
   }, []);
 
   const handleReturnToSavedData = () => {
-    history.push("/");
+    router.push("/");
   };
 
   const MotionDiv = ({ children }) => (
