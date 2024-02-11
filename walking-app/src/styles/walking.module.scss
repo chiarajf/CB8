@@ -22,7 +22,7 @@
   .startButton,
   .backButton {
     @include font("Montserrat", 400, 1em, 0 0 40px 0, 1.2em);
-
+    padding-bottom: 100px;
     align-items: center;
     background-clip: padding-box;
     background-color: $color3;
