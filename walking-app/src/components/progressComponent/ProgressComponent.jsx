@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom"; // Importa useHistory per navigare tra le pagine
 import styles from "./index.module.scss";
 import Meteo from "../meteo/Meteo";
 import { motion } from "framer-motion";
@@ -6,6 +7,7 @@ import SleepData from "../sleepData/SleepData";
 
 const ProgressComponent = () => {
   const [savedDailyProgress, setSavedDailyProgress] = useState(null);
+  const history = useHistory(); // Inizializza la history per la navigazione
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -13,6 +15,10 @@ const ProgressComponent = () => {
       setSavedDailyProgress(data);
     }
   }, []);
+
+  const handleReturnToSavedData = () => {
+    history.push("/");
+  };
 
   const MotionDiv = ({ children }) => (
     <motion.div
@@ -30,6 +36,9 @@ const ProgressComponent = () => {
     <div className={styles.progressContainer}>
       <MotionDiv>
         <div>
+          <button onClick={handleReturnToSavedData}>
+            Torna al dato salvato
+          </button>
           {savedDailyProgress ? (
             savedDailyProgress.map((item, index) => (
               <div key={index} className={styles.progressItem}>
