@@ -71,7 +71,11 @@ export default function Walking() {
   const saveProgress = () => {
     const currentDayData = walkData[`day${currentDay}`];
     if (currentDayData) {
-      setDailyProgress([{ day: currentDay, data: currentDayData }]);
+      const updatedDailyProgress = [
+        ...dailyProgress,
+        { day: currentDay, data: currentDayData },
+      ];
+      setDailyProgress(updatedDailyProgress);
     }
   };
 
@@ -200,9 +204,7 @@ export default function Walking() {
                   className={styles.startButton}
                   onClick={handleStartWalking}
                 >
-                  {progressSaved
-                    ? "Riprendi il cammino!"
-                    : "Inizia il cammino!"}
+                  Inizia il cammino!
                 </button>
               </div>
             </div>
