@@ -22,6 +22,11 @@ export default function Walking() {
   const [dailyProgress, setDailyProgress] = useState([]);
 
   useEffect(() => {
+    localStorage.setItem("currentDay", currentDay);
+    localStorage.setItem("dailyProgress", JSON.stringify(dailyProgress));
+  }, [currentDay, dailyProgress]);
+
+  useEffect(() => {
     const savedCurrentDay = localStorage.getItem("currentDay");
     if (savedCurrentDay) {
       setCurrentDay(parseInt(savedCurrentDay));
@@ -53,11 +58,6 @@ export default function Walking() {
       setShowDayByDay(true);
     }
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem("currentDay", currentDay);
-    localStorage.setItem("dailyProgress", JSON.stringify(dailyProgress));
-  }, [currentDay, dailyProgress]);
 
   const handleNextDay = (event) => {
     event.preventDefault();
