@@ -27,10 +27,8 @@ export default function Walking() {
       setCurrentDay(parseInt(savedCurrentDay));
     }
 
-    if (savedDailyProgress !== null && savedDailyProgress.length > 0) {
-      setCurrentDay(savedDailyProgress[savedDailyProgress.length - 1].day);
+    if (savedDailyProgress !== null) {
       setDailyProgress(savedDailyProgress);
-      setShowDayByDay(true);
     }
   }, []);
 
@@ -72,14 +70,16 @@ export default function Walking() {
   const saveProgress = () => {
     const currentDayData = walkData[`day${currentDay}`];
     if (currentDayData) {
-      setDailyProgress([{ day: currentDay, data: currentDayData }]);
+      const updatedDailyProgress = [
+        ...dailyProgress,
+        { day: currentDay, data: currentDayData },
+      ];
+      setDailyProgress(updatedDailyProgress);
     }
   };
 
   const handleSaveProgress = () => {
-    if (dailyProgress.length > 0) {
-      saveProgress();
-    }
+    saveProgress();
   };
 
   const handleClearProgress = () => {
