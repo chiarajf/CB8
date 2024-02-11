@@ -16,6 +16,7 @@ export default function Walking() {
   const [currentDay, setCurrentDay] = useState(1);
   const [showDayByDay, setShowDayByDay] = useState(false);
   const [dailyProgress, setDailyProgress] = useState([]);
+  const [progressSaved, setProgressSaved] = useState(false);
 
   useEffect(() => {
     const savedCurrentDay = localStorage.getItem("currentDay");
@@ -79,11 +80,15 @@ export default function Walking() {
   };
 
   const handleSaveProgress = () => {
-    saveProgress();
+    if (dailyProgress.length > 0) {
+      saveProgress();
+      setProgressSaved(true);
+    }
   };
 
   const handleClearProgress = () => {
     setDailyProgress([]);
+    setProgressSaved(false);
   };
 
   const handleGoToHome = () => {
@@ -199,7 +204,9 @@ export default function Walking() {
                   className={styles.startButton}
                   onClick={handleStartWalking}
                 >
-                  Inizia il cammino!
+                  {progressSaved
+                    ? "Riprendi il cammino!"
+                    : "Inizia il cammino!"}
                 </button>
               </div>
             </div>
