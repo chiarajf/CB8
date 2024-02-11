@@ -51,7 +51,6 @@ const AppShellComponent = ({ children, progressButtons, hideNavbar }) => {
           <Link className={styles.link} href="/progress">
             I miei progressi
           </Link>
-          <div>{progressButtons}</div>
         </AppShell.Navbar>
       )}
       <AppShell.Main className={mainClassName}>{children}</AppShell.Main>
