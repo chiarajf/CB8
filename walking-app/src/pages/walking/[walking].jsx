@@ -95,7 +95,6 @@ export default function Walking() {
 
   const handleGoToProgress = () => {
     router.push("/progress");
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   if (!filteredData) {
