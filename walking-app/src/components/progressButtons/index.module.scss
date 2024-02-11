@@ -10,7 +10,65 @@
 }
 
 .ProgressButtons {
-  display: none;
+  padding: 20px;
+  @include display(flex, row, space-between, center, 0, 0);
+
+  svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .savedButton,
+  .trashButton {
+    @include font("Montserrat", 400, 1em, 0, 1.2em);
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    align-items: center;
+    background-clip: padding-box;
+    background-color: $color1;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    min-height: 3rem;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+
+  .popup,
+  .clearPopup {
+    @include display(flex, inherit, center, center, 0, 0);
+    position: fixed;
+    @include font("Montserrat", 400, 1em, 0, 1.4em);
+    width: 50vw;
+    height: 25vh;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    opacity: 0;
+    animation: fadeInAnimation 0.5s ease-in-out forwards; // Applica l'animazione fade-in
+  }
+
+  .popup {
+    background-color: $color1;
+    color: $basecolor;
+  }
+
+  .clearPopup {
+    background-color: $color3;
+    color: $basecolor;
+  }
 }
 
 @media only screen and (max-width: 600px) {
