@@ -67,6 +67,17 @@ export default function Walking() {
     }
   };
 
+  const saveProgress = () => {
+    const currentDayData = walkData[`day${currentDay}`];
+    if (currentDayData) {
+      const updatedDailyProgress = [
+        ...dailyProgress,
+        { day: currentDay, data: currentDayData },
+      ];
+      setDailyProgress(updatedDailyProgress);
+    }
+  };
+
   const handleSaveProgress = () => {
     const currentDayData = walkData[`day${currentDay}`];
     if (currentDayData) {
