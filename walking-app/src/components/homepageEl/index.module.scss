@@ -1,0 +1,82 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.homepage {
+  position: relative;
+  height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/homepage.jpg");
+  background-size: cover;
+  background-position: center center;
+  @include display(flex, column, center, center, 0px, 0);
+  padding: 0 30px;
+
+  .title {
+    color: $basecolor;
+    @include font("Montserrat", 400, 1.8em, 0, 1.2em);
+    z-index: 1;
+    width: 50%;
+  }
+
+  button {
+    @include font("Montserrat", 400, 1em, 0, 1.2em);
+    margin-top: 20px;
+    background-clip: padding-box;
+    background-color: $color1;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    min-height: 3rem;
+    padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+
+    &:hover {
+      background-color: $color3;
+    }
+  }
+
+  .overlay {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #10454e79;
+    mix-blend-mode: multiply;
+    z-index: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .homepage {
+    @include display(flex, column, center, flex-start, 0px, 0);
+    .title {
+      color: $basecolor;
+      @include font("Montserrat", 400, 1.8em, 0, 1.2em);
+      z-index: 1;
+      width: 100%;
+    }
+  }
+}

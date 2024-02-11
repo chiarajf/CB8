@@ -1,0 +1,37 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.container {
+  @include display(flex, column, space-between, center, 20px, 0);
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.item {
+  padding: 20px 20px;
+  background-color: $color2;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    @include font("Montserrat", 600, 1.2em, 0, 2em);
+    color: $color1;
+  }
+
+  p {
+    @include font("Montserrat", 400, 0.9em, 0, 1.3em);
+  }
+}

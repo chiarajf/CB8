@@ -1,0 +1,68 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.Hero {
+  border-radius: 0 0 25px 25px;
+  @include display(flex, column, center, center, 0, 0);
+  box-shadow: 3px -3px 3px rgba(34, 34, 34, 0.062745098);
+}
+
+.image {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.heroContainer {
+  @include display(flex, row, space-between, center, 40px, 0);
+  margin-bottom: 4em;
+
+  .textContainer {
+    padding: 20px;
+
+    width: 40%;
+    @include display(flex, column, space-between, flex-start, 0, 0);
+    text-align: justify;
+
+    h2 {
+      @include font("Montserrat", 600, 1.9em, 0 0 20px 0, 1.2);
+      color: $color1;
+      text-align: left;
+    }
+
+    p {
+      @include font("Montserrat", 400, 0.9em, 0, 25px);
+      letter-spacing: 1px;
+    }
+  }
+
+  .frameContainer {
+    width: 60%;
+    @include display(flex, row, space-between, center, 0, 0);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Hero {
+    @include display(flex, column, space-between, center, 0px, 0);
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+
+    .heroContainer {
+      width: 100%;
+    }
+  }
+
+  .heroContainer {
+    @include display(flex, column, space-between, center, 20px, 0);
+
+    .textContainer {
+      width: 100%;
+    }
+
+    .frameContainer {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

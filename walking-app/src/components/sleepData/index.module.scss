@@ -1,0 +1,14 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.SleepData {
+}
+
+@media only screen and (max-width: 600px) {
+  .SleepData {
+    p {
+      margin: 20px 0 !important;
+      @include font("Montserrat", 400, 1em, 0, 1em);
+    }
+  }
+}

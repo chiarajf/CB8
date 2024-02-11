@@ -1,0 +1,59 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.walking {
+  .meteo_detail {
+    @include display(flex, column, flex-start, center, 0px, 0);
+  }
+
+  .starter {
+    @include display(flex, column, flex-start, center, 20px, 20px 0 0 0);
+  }
+
+  .navigation_buttons {
+    padding: 20px;
+    @include display(flex, row, center, center, 0, 0);
+  }
+
+  .daybyday_container {
+    padding-bottom: 30px;
+  }
+
+  .startButton,
+  .backButton {
+    @include font("Montserrat", 400, 1em, 0 0 40px 0, 1.2em);
+
+    align-items: center;
+    background-clip: padding-box;
+    background-color: $color3;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    min-height: 3rem;
+    padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+  }
+
+  .startButton:hover,
+  .backButton:hover {
+    transition: all 0.55s;
+
+    background-color: $color1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .walking {
+  }
+}

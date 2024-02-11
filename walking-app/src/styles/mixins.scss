@@ -1,0 +1,30 @@
+@mixin display(
+  $display: inherit,
+  $fledirection: row,
+  $justify-content: inherit,
+  $align-items: inherit,
+  $gap: 0px,
+  $margin: 0px
+) {
+  display: $display;
+  flex-direction: $fledirection;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+  margin: $margin;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@mixin font(
+  $family: "Montserrat",
+  $weight: normal,
+  $size: 16px,
+  $margin: 0,
+  $line: 0
+) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  margin: $margin;
+  line-height: $line;
+}

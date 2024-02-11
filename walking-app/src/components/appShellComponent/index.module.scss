@@ -1,0 +1,96 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.AppShell {
+  .mainHome {
+    padding: 90px 0 0 0 !important;
+  }
+
+  animation: blurFadeAnimation 0.35s ease-out forwards;
+
+  .AppShellMain {
+    padding-right: 0;
+    padding-left: 300px;
+  }
+
+  .link {
+    @include font("Montserrat", 500, 0.9em, 0 0 20px 0, 1.5em);
+
+    color: $color1;
+
+    .link:hover {
+      transition: all 0.35s;
+
+      color: $color3;
+    }
+  }
+  .AppShellHeader {
+    @include display(flex, inherit, space-between, center, 0, 0);
+    padding: 20px 30px;
+    height: 90px;
+  }
+
+  .AppShellNavbar {
+    top: 90px;
+    padding: 30px !important;
+  }
+
+  .AppShellHeaderEl {
+    @include display(flex, inherit, space-between, center, 20px, 0);
+  }
+
+  .Footer {
+    height: auto;
+    text-align: right;
+  }
+
+  .withLove {
+    @include font("Montserrat", 500, 0.9em, 0, 1.5em);
+    text-align: right;
+    padding: 10px;
+    background-color: $color2;
+    color: $color1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .AppShell {
+    .AppShellHeader {
+      @include display(flex, inherit, space-between, center, 0, 0);
+      padding: 0 20px;
+      height: 90px;
+    }
+
+    .AppShellMain {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .Footer {
+      background-color: $color2;
+      position: absolute;
+      left: 0;
+      width: 100%;
+    }
+
+    .AppShellNavbar {
+      top: 90px;
+      padding: 30px !important;
+    }
+  }
+}
+
+@keyframes blurFadeAnimation {
+  0% {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(5px);
+    opacity: 0.5;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}

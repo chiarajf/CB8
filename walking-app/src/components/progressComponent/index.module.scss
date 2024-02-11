@@ -1,0 +1,20 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.progressContainer {
+  padding: 0;
+
+  h2 {
+    @include font("Montserrat", 600, 1.6em, 0 20px 10px 20px, 1.8em);
+    color: $color1;
+  }
+
+  h3 {
+    @include font("Montserrat", 700, 1.2em, 20px 20px 0 20px, 1.2em);
+    color: $color1;
+  }
+
+  .sleep {
+    padding: 20px;
+  }
+}
