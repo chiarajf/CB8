@@ -5,6 +5,8 @@
   @include display(flex, column, space-between, center, 20px, 0);
   width: 100%;
   padding: 20px 20px;
+  padding-bottom: 100px;
+  padding: 10%;
 }
 
 .item {
@@ -33,5 +35,15 @@
 
   p {
     @include font("Montserrat", 400, 0.9em, 0, 1.3em);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    @include display(flex, column, space-between, center, 20px, 0);
+    width: 100%;
+    padding: 20px 20px;
+    padding-bottom: 100px;
+    padding: 3%;
   }
 }
