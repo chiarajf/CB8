@@ -46,7 +46,7 @@ export default function Walking() {
       const nextDayData = walkData[`day${nextDay}`];
       if (nextDayData) {
         setCurrentDay(nextDay);
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scroll({ top: 0, behavior: "smooth" });
       }
     } else {
       router.push("/percorso-completato");
@@ -55,13 +55,13 @@ export default function Walking() {
 
   const handleStartWalking = () => {
     setShowDayByDay(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scroll({ top: 0, behavior: "smooth" });
   };
 
   const handlePrevDay = () => {
     if (currentDay > 1) {
       setCurrentDay(currentDay - 1);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scroll({ top: 0, behavior: "smooth" });
     } else {
       setShowDayByDay(false);
     }
