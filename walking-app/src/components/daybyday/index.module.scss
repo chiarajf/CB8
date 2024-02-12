@@ -45,7 +45,7 @@
   .DayByDay {
     .listDetail {
       padding: 20px 0;
-      @include display(flex, row, center, center, 2px, 0);
+      @include display(flex, row, center, flex-start, 2px, 0);
     }
     .listDetailLi {
       list-style-type: none;
