@@ -34,7 +34,7 @@ const DayByDay = ({
 
         <h1 key="city">Benvenuto nella città di {city}</h1>
         <p key="description"> {description}</p>
-        <div>
+        <div className={styles.ContainerImg}>
           <ul className={styles.listDetail}>
             <li className={styles.listDetailLi} key="difficulty">
               <Image

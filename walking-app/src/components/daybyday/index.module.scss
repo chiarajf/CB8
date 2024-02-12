@@ -9,6 +9,10 @@
     -moz-columns: 5;
   }
 
+  .ContainerImg {
+    height: 10vh;
+  }
+
   .listDetailLi {
     list-style-type: none;
     @include display(flex, column, center, center, 2px, 0);
