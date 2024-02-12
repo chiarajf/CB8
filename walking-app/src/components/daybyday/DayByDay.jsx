@@ -33,7 +33,10 @@ const DayByDay = ({
         <Meteo firstCity={city} />
 
         <h1 key="city">Benvenuto nella città di {city}</h1>
-        <p key="description"> {description}</p>
+        <p className={styles.description} key="description">
+          {" "}
+          {description}
+        </p>
         <ul className={styles.listDetail}>
           <li className={styles.listDetailLi} key="difficulty">
             <Image
