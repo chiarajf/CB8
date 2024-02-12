@@ -4,13 +4,7 @@
 .DayByDay {
   margin-top: 20px;
   .listDetail {
-    columns: 5;
-    -webkit-columns: 5;
-    -moz-columns: 5;
-  }
-
-  .ContainerImg {
-    height: 10vh;
+    @include display(flex, row, center, center, 0, 0);
   }
 
   .listDetailLi {
@@ -44,5 +38,23 @@
   p {
     padding: 0 20px;
     @include font("Montserrat", 400, 0.9em, 30px 0 20px 0, 1.5em);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .DayByDay {
+    .listDetail {
+      padding: 20px 0;
+      @include display(flex, column, center, center, 2px, 0);
+    }
+    .listDetailLi {
+      list-style-type: none;
+      @include display(flex, column, center, center, 2px, 0);
+    }
+
+    p {
+      padding: 0 20px;
+      @include font("Montserrat", 400, 0.9em, 0 0 0 0, 1.5em);
+    }
   }
 }

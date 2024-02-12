@@ -34,55 +34,53 @@ const DayByDay = ({
 
         <h1 key="city">Benvenuto nella città di {city}</h1>
         <p key="description"> {description}</p>
-        <div className={styles.ContainerImg}>
-          <ul className={styles.listDetail}>
-            <li className={styles.listDetailLi} key="difficulty">
-              <Image
-                src={"/difficulty.png"}
-                width={100}
-                height={100}
-                className={styles.image}
-              />
-              <p> {difficulty}</p>
-            </li>
-            <li className={styles.listDetailLi} key="distance">
-              <Image
-                src={"/distance.png"}
-                width={100}
-                height={100}
-                className={styles.image}
-              />
-              <p> {distance}</p>
-            </li>
-            <li className={styles.listDetailLi} key="ascent">
-              <Image
-                src={"/ascent.png"}
-                width={100}
-                height={100}
-                className={styles.image}
-              />
-              <p> {ascent}</p>
-            </li>
-            <li className={styles.listDetailLi} key="descent">
-              <Image
-                src={"/discent.png"}
-                width={100}
-                height={100}
-                className={styles.image}
-              />
-              <p> {descent}</p>
-            </li>
-            <li className={styles.listDetailLi} key="highest_point">
-              <Image
-                src={"/alto.png"}
-                width={100}
-                height={100}
-                className={styles.image}
-              />
-              <p> {highest_point}</p>
-            </li>
-          </ul>
-        </div>
+        <ul className={styles.listDetail}>
+          <li className={styles.listDetailLi} key="difficulty">
+            <Image
+              src={"/difficulty.png"}
+              width={100}
+              height={100}
+              className={styles.image}
+            />
+            <p> {difficulty}</p>
+          </li>
+          <li className={styles.listDetailLi} key="distance">
+            <Image
+              src={"/distance.png"}
+              width={100}
+              height={100}
+              className={styles.image}
+            />
+            <p> {distance}</p>
+          </li>
+          <li className={styles.listDetailLi} key="ascent">
+            <Image
+              src={"/ascent.png"}
+              width={100}
+              height={100}
+              className={styles.image}
+            />
+            <p> {ascent}</p>
+          </li>
+          <li className={styles.listDetailLi} key="descent">
+            <Image
+              src={"/discent.png"}
+              width={100}
+              height={100}
+              className={styles.image}
+            />
+            <p> {descent}</p>
+          </li>
+          <li className={styles.listDetailLi} key="highest_point">
+            <Image
+              src={"/alto.png"}
+              width={100}
+              height={100}
+              className={styles.image}
+            />
+            <p> {highest_point}</p>
+          </li>
+        </ul>
         <iframe
           src={url}
           title="Embedded Content"
