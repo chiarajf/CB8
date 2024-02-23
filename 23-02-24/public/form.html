@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form di contatto</title>
+  </head>
+  <body>
+    <h1>Form di contatto, inserisci i dati richiesti!</h1>
+    <form action="/mostra-dati" method="POST">
+      <label>Inserisci il tuo nome</label>
+      <input type="text" name="nome" />
+      <label>Inserisci il tuo cognome</label>
+      <input type="text" name="cognome" />
+      <label>Scegli il tuo colore</label>
+      <select name="segno">
+        <option>Ariete</option>
+        <option>Bilancia</option>
+        <option>Scorpione</option>
+      </select>
+      <button type="submit">Invia</button>
+    </form>
+  </body>
+</html>
