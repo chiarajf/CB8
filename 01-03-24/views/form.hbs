@@ -1,0 +1,27 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes form</title>
+  </head>
+  <body>
+    <h1>Form quotes</h1>
+    <form action="/form" method="post">
+      <label>Write something!</label>
+      <input type="text" name="quote" />
+      <label>Write your name</label>
+      <input type="text" name="author" />
+      <button>Post!</button>
+    </form>
+    <a href="/">Go back to home page</a>
+    <hr />
+    <div>
+      {{#each data}}
+        <P>{{this.id}}</P>
+        <h3>{{this.quote}}</h3>
+        <p>{{this.author}}</p>
+        <hr />
+      {{/each}}
+    </div>
+  </body>
+</html>

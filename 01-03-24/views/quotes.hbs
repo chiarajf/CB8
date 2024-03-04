@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes Page</title>
+  </head>
+  <body>
+    <h1>This is the quotes page</h1>
+    <a href="/">Go back to home page</a>
+    <br />
+    <a href="/form">Post something!</a>
+    <hr />
+    <div>
+      {{#each data}}
+        <P>{{this.id}}</P>
+        <h3>{{this.quote}}</h3>
+        <p>{{this.author}}</p>
+        <hr />
+      {{/each}}
+    </div>
+  </body>
+</html>
