@@ -1,0 +1,16 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Prodotti donna</title>
+  </head>
+  <body>
+    <h1>Sezione prodotti da donna</h1>
+    {{#each data}}
+      <h2>{{this.categoria}}</h2>
+      <p>{{this.taglia}}</p>
+      <p>{{this.descrizione}}</p>
+    {{/each}}
+  </body>
+</html>

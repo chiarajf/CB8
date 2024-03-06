@@ -1,0 +1,19 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Pagina di tutti i prodotti</title>
+  </head>
+  <body>
+    <h1>Qui puoi vedere tutti i prodotti che abbiamo!</h1>
+    <a href="/prodotti/uomo"> Guarda tutti i prodotti da uomo</a><br />
+    <a href="/prodotti/donna"> Guarda tutti i prodotti da donna</a><br />
+    <a href="/prodotti/bambino"> Guarda tutti i prodotti da bambino</a>
+    {{#each data}}
+      <h2>{{this.categoria}}</h2>
+      <p>{{this.taglia}}</p>
+      <p>{{this.descrizione}}</p>
+    {{/each}}
+  </body>
+</html>

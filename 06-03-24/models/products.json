@@ -1,0 +1,52 @@
+[
+  {
+    "categoria": "uomo",
+    "taglia": "M",
+    "descrizione": "Maglione a collo alto in lana merino"
+  },
+  {
+    "categoria": "donna",
+    "taglia": "S",
+    "descrizione": "Abito estivo floreale con spalle scoperte"
+  },
+  {
+    "categoria": "bambini",
+    "taglia": "4 anni",
+    "descrizione": "T-shirt con stampa di supereroi"
+  },
+  {
+    "categoria": "uomo",
+    "taglia": "L",
+    "descrizione": "Giubbotto in pelle con cappuccio staccabile"
+  },
+  {
+    "categoria": "donna",
+    "taglia": "M",
+    "descrizione": "Jeans skinny con effetto slavato"
+  },
+  {
+    "categoria": "bambini",
+    "taglia": "6 anni",
+    "descrizione": "Giacca imbottita con cappuccio"
+  },
+  {
+    "categoria": "uomo",
+    "taglia": "XL",
+    "descrizione": "Camicia a quadri in cotone"
+  },
+  {
+    "categoria": "donna",
+    "taglia": "L",
+    "descrizione": "Maglione oversize a righe"
+  },
+  {
+    "categoria": "bambini",
+    "taglia": "8 anni",
+    "descrizione": "Pantaloni sportivi con elastico in vita"
+  },
+  {
+    "categoria": "uomo",
+    "taglia": "S",
+    "descrizione": "Polo in piqué di cotone"
+  }
+]
