@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "titolo": "Il Signore degli Anelli",
+    "autore": "J.R.R. Tolkien"
+  },
+  {
+    "id": 2,
+    "titolo": "Cronache del ghiaccio e del fuoco",
+    "autore": "George R.R. Martin"
+  },
+  {
+    "id": 3,
+    "titolo": "1984",
+    "autore": "George Orwell"
+  },
+  {
+    "id": 4,
+    "titolo": "Il giovane Holden",
+    "autore": "J.D. Salinger"
+  },
+  {
+    "id": 5,
+    "titolo": "Orgoglio e pregiudizio",
+    "autore": "Jane Austen"
+  },
+  {
+    "id": 6,
+    "titolo": "Don Chisciotte",
+    "autore": "Miguel de Cervantes"
+  },
+  {
+    "id": 7,
+    "titolo": "Guerra e pace",
+    "autore": "Lev Tolstoj"
+  },
+  {
+    "id": 8,
+    "titolo": "Moby Dick",
+    "autore": "Herman Melville"
+  },
+  {
+    "id": 9,
+    "titolo": "Il grande Gatsby",
+    "autore": "F. Scott Fitzgerald"
+  },
+  {
+    "id": 10,
+    "titolo": "Anna Karenina",
+    "autore": "Lev Tolstoj"
+  }
+]
